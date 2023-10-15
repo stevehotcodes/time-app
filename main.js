@@ -28,9 +28,6 @@ window.addEventListener('load',(e)=>{
    year_display.value=timeDiff.years
    month_display.value=timeDiff.months
    day_display.value=timeDiff.days
-
-
-    
     
  })
 
