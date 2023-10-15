@@ -18,26 +18,46 @@ window.addEventListener('load',(e)=>{
     const month=month_el.value;
     const year=year_el.value;
 
-    year_display.value=year;
-    month_display.value=month;
-    day_display.value=day;
-
-
-    //current date
-    const todayDate=new Date();
-    const inputDate=new Date(day, month, year);
-
-    console.log("Birthday date",inputDate)
-    console.log("this is the date for today",todayDate);
-    
+//convert the numbers/input to date
+   const inputDate= new Date(`${day}-${month}-${year}`);
+  
+   const currentDate=new Date()
    
-    
-    
+   const timeDiff=dateDiff(inputDate, currentDate);
+
+   year_display.value=timeDiff.years
+   month_display.value=timeDiff.months
+   day_display.value=timeDiff.days
 
 
     
     
  })
-    
+
+//function for date difference
+   function dateDiff(d1,d2){
+   let years=d2.getFullYear()-d1.getFullYear();
+   let months=d2.getMonth()-d1.getMonth();
+   let days=d2.getDate()-d1.getDate();
+
+  //conditions if d1>d2
+   if (days < 0) {
+      months--;
+      days += new Date(d2.getFullYear(), d2.getMonth(), 0).getDate();
+  }
+
+  if (months < 0) {
+      years--;
+      months += 12;
+  }
+
+  return {
+      years: years,
+      months: months,
+      days: days
+  };
+}
+
+   
 
 })
