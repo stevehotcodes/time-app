@@ -20,25 +20,25 @@
       <form class="input-form">
         <div class="form-group-1">
           <div class="label-input-wrapper">
-            <label class="label">Day</label>
-            <input type="text">
+            <label class="label" >Day</label>
+            <input type="text"min="1" max="31" maxlength="2" id="day">
         </div>
 
         <div class="label-input-wrapper">
-          <label class="label">Month</label>
-          <input type="text">
+          <label class="label" >Month</label>
+          <input type="text" min="1" max="12" maxlength="2"  id="month" >
       </div>
 
       <div class="label-input-wrapper">
-        <label class="label">Year</label>
-        <input type="text">
+        <label class="label year" >Year</label>
+        <input type="text" min="1900" max="2099"  id="year" >
      </div>
 
         </div>
          
        <div class="line-arrow-wrapper">
         <div class="line"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        <svg    class="svg"   xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
       </div>
 
       </form>
@@ -47,13 +47,13 @@
 
       <form class="output-form">
         <div class="label-output-wrapper">
-          <input type="text"><label class="output-label" aria-placeholder="yy">years</label>
+          <input type="text" id="year-display"><label class="output-label" placeholder="yy" >years</label>
         </div>
         <div class="label-output-wrapper">
-          <input type="text"><label class="output-label" aria-placeholder="mm">months</label>
+          <input type="text" id="month-display"><label class="output-label" placeholder="mm">months</label>
         </div>
         <div class="label-output-wrapper">
-          <input type="text"><label class="output-label" aria-placeholder="dd">days</label>
+          <input type="text" id="day-display"><label class="output-label" placeholder="dd">days</label>
         </div>
        
         
@@ -104,4 +104,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+ <script src="./main.js"></script>
 </html>

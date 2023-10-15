@@ -65,9 +65,13 @@ body{
     outline:none;
     border:1px solid var(--Smokey-grey);
     padding:.7rem;
-    width:5rem;
+    width:6rem;
     font-size: 2rem;
     font-weight: 800;
+}
+
+.label-input-wrapper>.year{
+    width:9rem;
 }
 
 .line-arrow-wrapper{
@@ -121,6 +125,6 @@ svg:active{
     gap:0.7rem;
     padding: 4px;
 }
-input::placeholder{
+/* input::placeholder{
     background-color:var(--Purple);
-}
+} */
