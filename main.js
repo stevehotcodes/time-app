@@ -6,12 +6,14 @@ window.addEventListener('load',(e)=>{
     const year_el=document.querySelector("#year");
     const svg_el=document.querySelector(".svg")
 
-    const year_display=document.querySelector("#year-display");
-    const month_display=document.querySelector("#month-display");
-    const day_display=document.querySelector("#day-display");
+    const year_display=document.querySelector(".year-display");
+    const month_display=document.querySelector(".month-display");
+    const day_display=document.querySelector(".day-display");
+    const errorMsg=document.querySelectorAll(".error")
+
 
   
-    console.log(svg_el)
+    console.log(errorMsg)
 
  svg_el.addEventListener('click',(e)=>{
     const day=day_el.value;
@@ -22,12 +24,45 @@ window.addEventListener('load',(e)=>{
    const inputDate= new Date(`${day}-${month}-${year}`);
   
    const currentDate=new Date()
+
+
+   //checking validility of inputs
+   function inputValidation(){
+      let counter=0
+     
+
+      if(month<0 ||month>12 ||isNaN(month)){
+         counter +=1
+         errorMsg[0].style.opacity=1
+      }
+      else{
+         errorMsg[0].style.opacity=0
+      }
+      if(day< 0 ||day >31 ||isNaN(day)){
+         counter +=1
+         errorMsg[1].style.opacity=1
+
+      }else{
+         errorMsg[1].style.opacity=0
+      }
+
+      if(year <1900 || year>2023||isNaN(year)){
+         counter +=1
+         errorMsg[2].style.opacity=1
+         
+      }
+      else{
+         errorMsg[2].style.opacity=0
+      }
+   }
+   inputValidation()
+   
    
    const timeDiff=dateDiff(inputDate, currentDate);
 
-   year_display.value=timeDiff.years
-   month_display.value=timeDiff.months
-   day_display.value=timeDiff.days
+   year_display.value=timeDiff.years;
+   month_display.value=timeDiff.months;
+   day_display.value=timeDiff.days;
     
  })
 

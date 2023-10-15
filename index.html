@@ -22,16 +22,19 @@
           <div class="label-input-wrapper">
             <label class="label" >Month</label>
             <input type="number"min="1" max="12" maxlength="2" id="day">
+            <p class="error">Must be a valid month</p>
         </div>
 
         <div class="label-input-wrapper">
           <label class="label" >Day</label>
           <input type="number" min="1" max="31" maxlength="2"  id="month" >
+          <p class="error">Must be a valid day</p>
       </div>
 
       <div class="label-input-wrapper">
         <label class="label year" >Year</label>
         <input type="number" min="1900" max="2099"  id="year" >
+        <p class="error"> Must be a valid year</p>
      </div>
 
         </div>
@@ -48,13 +51,13 @@
       <form class="output-form">
 
         <div class="label-output-wrapper">
-          <input type="number" id="year-display"><label class="output-label" placeholder="yy" >years</label>
+          <input type="number" class="year-display active"><label class="output-label" placeholder="yy" >years</label>
         </div>
         <div class="label-output-wrapper">
-          <input type="number" id="month-display"><label class="output-label" placeholder="mm">months</label>
+          <input type="number" class="month-display active"><label class="output-label" placeholder="mm">months</label>
         </div>
         <div class="label-output-wrapper">
-          <input type="number" id="day-display"><label class="output-label" placeholder="dd">days</label>
+          <input type="number" class="day-display active"><label class="output-label" placeholder="dd">days</label>
         </div>
         
       </form>

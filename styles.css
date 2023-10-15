@@ -81,7 +81,6 @@ body{
     align-items: center;
     margin-top:.9rem;
 
-
 }
 .line{
     width:80%;
@@ -129,6 +128,15 @@ svg:active{
 /* input::placeholder{
     background-color:var(--Purple);
 } */
+
+
+
+.error{
+    color:var(--Light-red);
+    font-size: .6rem;
+    font-style: italic;
+    opacity:0;
+}
 
 @media screen and(max-width:375px){
     .content-wrapper{
