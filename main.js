@@ -48,7 +48,7 @@ window.addEventListener('load',(e)=>{
 
       if(year <1900 || year>2023||isNaN(year)){
          counter +=1
-         errorMsg[2].style.opacity=1
+         errorMsg[2].style.opacity=1 
          
       }
       else{
@@ -56,7 +56,7 @@ window.addEventListener('load',(e)=>{
       }
    }
    inputValidation()
-   
+
    
    const timeDiff=dateDiff(inputDate, currentDate);
 
