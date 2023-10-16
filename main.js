@@ -29,17 +29,15 @@ window.addEventListener('load',(e)=>{
    //checking validility of inputs
    function inputValidation(){
       let counter=0
-     
-
       if(month<0 ||month>12 ||isNaN(month)){
-         counter +=1
+         // counter +=1
          errorMsg[0].style.opacity=1
       }
       else{
          errorMsg[0].style.opacity=0
       }
       if(day< 0 ||day >31 ||isNaN(day)){
-         counter +=1
+         // counter +=1
          errorMsg[1].style.opacity=1
 
       }else{
@@ -47,7 +45,7 @@ window.addEventListener('load',(e)=>{
       }
 
       if(year <1900 || year>2023||isNaN(year)){
-         counter +=1
+         // counter +=1
          errorMsg[2].style.opacity=1 
          
       }
