@@ -29,31 +29,50 @@ window.addEventListener('load',(e)=>{
    //checking validility of inputs
    function inputValidation(){
       let counter=0
-      if(month<0 ||month>12 ||isNaN(month)){
+      if(month<0 ||month>12 ||isNaN(month) || month=== ""){
          // counter +=1
-         errorMsg[0].style.opacity=1
+         errorMsg[0].style.opacity=1 
+         month_el.style.border="2px solid red"
+         // inputForm.style.border="2px solid red"
+         setTimeout(()=>{
+            location.reload()
+         },2000)
       }
+
       else{
          errorMsg[0].style.opacity=0
       }
-      if(day< 0 ||day >31 ||isNaN(day)){
+      if(day< 0 ||day >31 ||isNaN(day)||day===""){
          // counter +=1
          errorMsg[1].style.opacity=1
+         day_el.style.border="2px solid red"
+         setTimeout(()=>{
+            location.reload()
+         },5000)
+        
+
 
       }else{
          errorMsg[1].style.opacity=0
+         
       }
 
-      if(year <1900 || year>2023||isNaN(year)){
-         // counter +=1
+      if(year <1900 || year>2023||isNaN(year) || year ===""){
+         
          errorMsg[2].style.opacity=1 
+         year_el.style.border="2px solid red"
+         setTimeout(()=>{
+            location.reload()
+         },5000)
          
       }
       else{
          errorMsg[2].style.opacity=0
       }
+   
    }
    inputValidation()
+   
 
    
    const timeDiff=dateDiff(inputDate, currentDate);
