@@ -69,7 +69,7 @@ window.addEventListener('load',(e)=>{
       else{
          errorMsg[2].style.opacity=0
       }
-   
+      return 
    }
    inputValidation()
    
