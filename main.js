@@ -36,13 +36,13 @@ window.addEventListener('load',(e)=>{
          // inputForm.style.border="2px solid red"
          setTimeout(()=>{
             location.reload()
-         },2000)
+         },7000)
       }
 
       else{
          errorMsg[0].style.opacity=0
       }
-      if(day< 0 ||day >31 ||isNaN(day)||day===""){
+      if(day< 0 || day >31 || isNaN(day)|| day===""){
          // counter +=1
          errorMsg[1].style.opacity=1
          day_el.style.border="2px solid red"
@@ -99,11 +99,21 @@ window.addEventListener('load',(e)=>{
       years--;
       months += 12;
   }
+   if(isNaN(years)||isNaN(months)||isNaN(days)){
+      return {
+         years: "Invalid result",
+         months:  "Invalid result",
+         days:  "Invalid result"
+     };
+   }
+   
+ 
+
 
   return {
       years: years,
       months: months,
-      days: days
+      days: days 
   };
 }
 
